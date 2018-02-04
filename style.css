@@ -1,0 +1,41 @@
+#id-main-div {
+  width: 70%;
+}
+
+#id-header {
+    background-color: #C2E0FF;
+    text-align: center;
+}
+
+#outputBox {
+    overflow: auto; 
+    width: calc(50% - 2px); 
+    height: 200px; 
+    border: solid black 1px;
+    float: left;
+}
+
+#id-inputs {
+    width: calc(50% - 2px); 
+    height: 200px; 
+    border: solid black 1px; 
+    vertical-align: top; 
+    float: left;
+}
+
+span.label {
+    display: inline-block; 
+    width: 75px;
+    margin: 10px 0px;
+}
+
+input.input {
+    width: 50%;
+    margin: 10px 0px;
+}
+
+#id-footer {
+    clear: both; 
+    background-color: #0066FF; 
+    text-align: center;
+}

@@ -3,32 +3,45 @@
 <head>
 	<meta charset = "UTF-8">
 	<title>HTML - Layout</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<div style = "width: 70%;">
-		<div style = "background-color: #C2E0FF; text-align: center;">
-			<span>Layout Using Divs</span>
+	<div id="id-main-div">
+		<div id="id-header">
+			<span>Browser GameLoop</span>
 		</div>
 		
 		<div>
-			<div style = "width: calc(50% - 2px); height: 120px; border: solid black 1px; float: left;">
+			<div id= "outputBox">
 				
 			</div>
 
-			<div style = "width: calc(50% - 2px); height: 120px; border: solid black 1px; vertical-align: top; float: left;">
-				<label for="id-name">Name: </label>
-				<input type=text id="id-name"><br>
-				<label for="id-interval">Interval: </label>
-				<input type=text id="id-interval"><br>
-				<label for="id-times"># Times: </label>
-				<input type=text id="id-times"><br>
+			<div id="id-inputs">
+				
+				<div>
+				<span for="id-name" class="label">Name: </span>
+				<input type=text id="id-name" class="input"><br>
+				</div>
+				<div>
+				<span for="id-interval" class="label">Interval: </span>
+				<input type=text id="id-interval" class="input"><br>
+				</div>
+				<div>
+				<span for="id-times" class="label"># Times: </span>
+				<input type=text id="id-times" class="input"><br>
+				</div>
+
+
 				<br>
-				<button>Add Event</button>
+				<div align="center">
+					<button onclick="buttonPress()">Add Event</button>
+				</div>
 			</div>
 		</div>
 		
-		<div style = "clear: both; background-color: #0066FF; text-align: center;">
-			<span>Brought to you by Dean Mathias</span>
+		<div id="id-footer">
+			<span>Created for CS 5410</span>
 		</div>
 	</div>
 </body>

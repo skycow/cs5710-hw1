@@ -20,7 +20,7 @@ function processInput(elapsedTime) {
 function update(elapsedTime) {
 	//console.log('elapsedTime: ', elapsedTime);
 
-	for(var i = 0; i < events.length; i++){
+	for(var i = events.length-1; i >= 0; i--){
 		events[i].currInt -= elapsedTime;
 		if(events[i].currInt <= 0)
 		{
