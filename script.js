@@ -4,17 +4,27 @@ let previousTime = performance.now();
 let events = [];
 let toDisplay = [];
 
+let pressed = false;
+
 function buttonPress() {
+	pressed = true;
+}
+
+function processInput(elapsedTime) {
+
+	if(pressed){
 	let name = document.getElementById("id-name").value;
 	let origInt = document.getElementById("id-interval").value;
 	let currInt = document.getElementById("id-interval").value;
 	let times = document.getElementById("id-times").value;
 
-	events.push({name: name, origInt: origInt, currInt: currInt, times: times});
-}
-
-function processInput(elapsedTime) {
-
+	if(name != "" && origInt != "" && times != "") {
+		events.push({name: name, origInt: origInt, currInt: currInt, times: times});
+	}
+	
+	pressed = false;
+		
+	}
 }
 
 function update(elapsedTime) {
@@ -36,11 +46,12 @@ function update(elapsedTime) {
 
 function render(elapsedTime) {
 
-	for(var j = 0; j < toDisplay.length; j++){
+	for(var j = toDisplay.length-1; j >= 0; j--){
 		var addition = '<span>Event: ' + toDisplay[j].name + ' (' + toDisplay[j].times + ' remaining)</span><br>';
-		document.getElementById("outputBox").innerHTML += addition;
+		var output = document.getElementById("outputBox"); 
+		output.innerHTML += addition;
 		toDisplay.splice(j,1);
-		document.getElementById("outputBox").scrollTop = document.getElementById("outputBox").scrollHeight;
+		output.scrollTop = output.scrollHeight;
 	}
 
 }
