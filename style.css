@@ -3,7 +3,7 @@
 }
 
 #id-header {
-    background-color: #C2E0FF;
+    background-color: aqua;
     text-align: center;
 }
 
@@ -27,6 +27,7 @@ span.label {
     display: inline-block; 
     width: 75px;
     margin: 10px 0px;
+    margin-left: 5px;
 }
 
 input.input {
@@ -36,6 +37,6 @@ input.input {
 
 #id-footer {
     clear: both; 
-    background-color: #0066FF; 
+    background-color: aqua; 
     text-align: center;
 }
